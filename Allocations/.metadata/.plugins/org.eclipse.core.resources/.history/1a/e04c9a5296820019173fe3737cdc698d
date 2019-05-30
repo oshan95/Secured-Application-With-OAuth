@@ -1,0 +1,13 @@
+package com.virtusa.ams;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AllocationSerivceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AllocationSerivceApplication.class, args);
+	}
+
+}

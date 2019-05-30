@@ -1,0 +1,9 @@
+package com.virtusa.ams.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.virtusa.ams.modal.Allocation;
+
+public interface AllocationRepository extends JpaRepository<Allocation, Integer> {
+
+}
