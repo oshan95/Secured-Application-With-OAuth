@@ -529,3 +529,124 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1449)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 11:48:10.018
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.JALzVNUV
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 11:48:10.029
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.JALzVNUV
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 11:48:10.029
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 11:48:10.029
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.JALzVNUV => OK
+!SESSION 2019-05-31 15:20:39.501 -----------------------------------------------
+eclipse.buildId=4.2.0.201903290612-RELEASE
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2019-05-31 15:21:00.948
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-05-31 15:21:02.536
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-31 15:21:02.537
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@430aae8e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78504ce9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:13.036
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:13.037
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@5746609e[org.springframework.tooling.boot.ls:1.5.0.201903290544(id=527)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:13.037
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:13.312
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.034
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.rBghbpva
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.034
+!MESSAGE subscribing to classpath changes: sts4.classpath.rBghbpva
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.035
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.035
+!MESSAGE subsribers = [sts4.classpath.rBghbpva]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.035
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.045
+!MESSAGE project Allocation-Serivce ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.046
+!MESSAGE Preparing classpath changed notification Allocation-Serivce
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.046
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.050
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.050
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.rBghbpva => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.064
+!MESSAGE classpath=126 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.064
+!MESSAGE executing callback sts4.classpath.rBghbpva Allocation-Serivce false 126
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:21:17.109
+!MESSAGE executing callback sts4.classpath.rBghbpva SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:06:09.165
+!MESSAGE Preparing classpath changed notification Allocation-Serivce
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:06:09.178
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:06:09.181
+!MESSAGE classpath=191 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:06:09.181
+!MESSAGE executing callback sts4.classpath.rBghbpva Allocation-Serivce false 191
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:06:09.202
+!MESSAGE executing callback sts4.classpath.rBghbpva SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:50:32.021
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rBghbpva
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:50:32.037
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.rBghbpva
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:50:32.037
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 16:50:32.037
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rBghbpva => OK

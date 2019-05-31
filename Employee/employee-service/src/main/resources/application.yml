@@ -9,8 +9,8 @@ spring:
       ddl-auto: create
     show-sql: true
 
-server:
-  port : 8080
+#server:
+#  port : 8080
 
 security:
   oauth2:

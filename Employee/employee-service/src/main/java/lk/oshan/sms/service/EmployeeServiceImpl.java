@@ -6,6 +6,9 @@ import java.util.Optional;
 import javax.persistence.Entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -15,6 +18,8 @@ import org.springframework.security.oauth2.provider.authentication.OAuth2Authent
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
+
+import com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler.Builder;
 
 import lk.oshan.sms.model.Allocation;
 import lk.oshan.sms.model.Employee;
@@ -29,6 +34,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	EmployeeRepository employeeRepository;
 
+	@Autowired
+	RestTemplate restTemplate;
 	
 	public Employee save(Employee employee) {
 		
@@ -48,7 +55,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		if (optionalEmployee.isPresent()) {
 			
 			//fetch project allocation
-			RestTemplate restTemplate = new RestTemplate();
+			//RestTemplate restTemplate = new RestTemplate();
 			HttpHeaders httpHeaders = new HttpHeaders();
 			
 			//extract token from context
@@ -59,7 +66,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 			ResponseEntity<Allocation[]> responseEntity;
 			HttpEntity<String> entity = new HttpEntity<>("",httpHeaders);
 			
-			responseEntity = restTemplate.exchange("http://localhost:9595/allocation/employee/".concat(employee.getId().toString()), HttpMethod.GET, entity, Allocation[].class);
+//			remove localhost:9595/
+			responseEntity = restTemplate.exchange("http://Allocation-Service/allocation/employee/".concat(employee.getId().toString()), HttpMethod.GET, entity, Allocation[].class);
 			
 			Employee employee1 = optionalEmployee.get();
 			employee1.setAllocations(responseEntity.getBody());

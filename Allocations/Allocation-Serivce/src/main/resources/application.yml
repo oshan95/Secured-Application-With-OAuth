@@ -8,8 +8,9 @@ spring:
     hibernate:
       ddl-auto: create
     show-sql: true
-server:
-  port: 9595
+    
+#server:
+#  port: 9595
   
 security:
   oauth2:

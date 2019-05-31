@@ -1,0 +1,81 @@
+package lk.oshan.sms.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.persistence.Entity;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
+
+import com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler.Builder;
+
+import lk.oshan.sms.model.Allocation;
+import lk.oshan.sms.model.Employee;
+import lk.oshan.sms.model.Project;
+import lk.oshan.sms.model.Telephone;
+import lk.oshan.sms.repository.EmployeeRepository;
+
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+	EmployeeRepository employeeRepository;
+
+	
+	
+	public Employee save(Employee employee) {
+		
+		for (Telephone telephone : employee.getTelephones()) {
+			telephone.setEmployee(employee);
+		}
+		
+		return employeeRepository.save(employee);
+	}
+	
+	public List<Employee> fetchAllEmployee(){
+		return employeeRepository.findAll();
+	}
+	
+	public Employee fetchEmployee(Employee employee) {
+		Optional<Employee> optionalEmployee = employeeRepository.findById(employee.getId());
+		if (optionalEmployee.isPresent()) {
+			
+			//fetch project allocation
+			RestTemplate restTemplate = new RestTemplate();
+			HttpHeaders httpHeaders = new HttpHeaders();
+			
+			//extract token from context
+			OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) SecurityContextHolder.getContext().getAuthentication().getDetails();
+			httpHeaders.add("Authorization","bearer".concat(details.getTokenValue()));
+			
+			//employee.getId().toString(), HttpMethod.GET, Entity, String.class
+			ResponseEntity<Allocation[]> responseEntity;
+			HttpEntity<String> entity = new HttpEntity<>("",httpHeaders);
+			
+//			remove localhost:9595/
+			responseEntity = restTemplate.exchange("http://localhost:9595/allocation/employee/".concat(employee.getId().toString()), HttpMethod.GET, entity, Allocation[].class);
+			
+			Employee employee1 = optionalEmployee.get();
+			employee1.setAllocations(responseEntity.getBody());
+			
+			//return optionalEmployee.get();
+			return employee1;
+		}else {
+			return null;
+		}
+	}
+
+}
