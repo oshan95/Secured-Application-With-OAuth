@@ -29,7 +29,7 @@ create table if not exists role (
   unique key name (name)
 ) engine=innodb ;
 
-create table if not exists  user  (
+create table if not exists  user (
   id int(11) not null auto_increment,
   username varchar(100) not null,
   password varchar(1024) not null,
@@ -100,3 +100,5 @@ create table if not exists oauth_approvals (
 	expiresAt TIMESTAMP,
 	lastModifiedAt TIMESTAMP
 );
+
+

@@ -857,3 +857,28 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact xmlpull:xmlpu
 2019-05-31 16:32:41,545 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-05-31 16:32:41,550 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-05-31 16:32:41,550 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Microserivces/DiscoverService/discovery-service/src/test/resources
+2019-05-31 17:29:15,078 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-31 17:35:59,031 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-31 17:35:59,045 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-05-31 17:35:59,070 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-05-31 17:35:59,072 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-31 17:35:59,094 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Secured-Application-With-OAuth/DiscoverService/discovery-service/src/test/resources
+2019-06-06 14:24:14,844 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-06 14:30:42,303 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-06 14:36:20,580 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 14:36:20,613 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 14:36:20,636 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-06-06 14:36:20,638 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 14:36:20,638 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Secured-Application-With-OAuth/DiscoverService/discovery-service/src/test/resources
+2019-06-06 16:05:18,928 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-06 16:19:49,141 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 16:19:49,150 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 16:19:49,167 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-06-06 16:19:49,169 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 16:19:49,169 [Worker-9: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Secured-Application-With-OAuth/DiscoverService/discovery-service/src/test/resources
+2019-06-06 17:18:19,808 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-06 17:21:08,536 [Worker-2: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 17:21:08,543 [Worker-2: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 17:21:08,568 [Worker-2: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-06-06 17:21:08,571 [Worker-2: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 17:21:08,571 [Worker-2: Launching discovery-service - DiscoveryServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Secured-Application-With-OAuth/DiscoverService/discovery-service/src/test/resources

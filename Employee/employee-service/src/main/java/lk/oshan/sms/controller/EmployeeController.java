@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -54,7 +57,15 @@ public class EmployeeController {
 	public ResponseEntity<Employee> fetctEmployee(@PathVariable Integer id) {
 		Employee employee = new Employee();
 		employee.setId(id);
-		Employee employee2 =employeeService.fetchEmployee(employee);
+		
+		HttpHeaders httpHeaders = new HttpHeaders();
+		
+		OAuth2AuthenticationDetails details =(OAuth2AuthenticationDetails)
+				SecurityContextHolder.getContext().getAuthentication().getDetails();
+		httpHeaders.add("Authorization","bearer ".concat(details.getTokenValue()));
+		System.out.println(details.getTokenValue());
+		
+		Employee employee2 =employeeService.fetchEmployee(employee, httpHeaders);
 		if(employee2==null) {
 			 return ResponseEntity.notFound().build();
 		 }else{
@@ -66,7 +77,15 @@ public class EmployeeController {
 	public ResponseEntity<List<Project>> fetchAllEmployeeProjects(@PathVariable Integer id) {
 		Employee employee = new Employee();
 		employee.setId(id);
-		Employee employee2 =employeeService.fetchEmployee(employee);
+		
+		HttpHeaders httpHeaders = new HttpHeaders();
+		
+		OAuth2AuthenticationDetails details =(OAuth2AuthenticationDetails)
+				SecurityContextHolder.getContext().getAuthentication().getDetails();
+		httpHeaders.add("Authorization","bearer ".concat(details.getTokenValue()));
+		System.out.println(details.getTokenValue());
+		
+		Employee employee2 =employeeService.fetchEmployee(employee, httpHeaders);
 		if(employee2==null) {
 			 return ResponseEntity.notFound().build();
 		 }else{

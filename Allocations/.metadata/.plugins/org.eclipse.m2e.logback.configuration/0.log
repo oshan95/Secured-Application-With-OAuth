@@ -328,3 +328,33 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-05-31 16:11:20,380 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-05-31 16:11:20,384 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-05-31 16:11:20,384 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Microserivces/Allocations/Allocation-Serivce/src/test/resources
+2019-05-31 17:28:34,720 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-31 17:33:21,978 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-31 17:33:22,042 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-05-31 17:33:22,116 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-05-31 17:33:22,201 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-31 17:33:22,211 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Microserivces/Allocations/Allocation-Serivce/src/test/resources
+2019-06-06 14:23:14,661 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-06 14:30:58,794 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-06 14:36:42,609 [Worker-11: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 14:36:42,629 [Worker-11: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 14:36:42,666 [Worker-11: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 14:36:42,713 [Worker-11: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 14:36:42,713 [Worker-11: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Microserivces/Allocations/Allocation-Serivce/src/test/resources
+2019-06-06 14:58:09,359 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 14:58:09,427 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 14:58:09,446 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-06-06 14:58:09,450 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 14:58:09,458 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Microserivces/Allocations/Allocation-Serivce/src/test/resources
+2019-06-06 16:05:52,701 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-06 16:20:32,194 [Worker-1: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 16:20:32,199 [Worker-1: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 16:20:32,224 [Worker-1: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-06 16:20:32,241 [Worker-1: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-06 16:20:32,241 [Worker-1: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Microserivces/Allocations/Allocation-Serivce/src/test/resources
+2019-06-06 17:19:33,522 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-06-07 08:43:50,095 [Worker-19: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-07 08:43:50,628 [Worker-19: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-07 08:43:50,892 [Worker-19: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-07 08:43:51,022 [Worker-19: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-07 08:43:51,022 [Worker-19: Launching Allocation-Serivce - AllocationSerivceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/user/Desktop/Microserivces/Allocations/Allocation-Serivce/src/test/resources

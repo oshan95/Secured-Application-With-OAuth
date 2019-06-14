@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Allocation-Service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    instance-id: ${spring.application.anme}-${random.int}
+    hostname: localhost
+server:
+  port: 0

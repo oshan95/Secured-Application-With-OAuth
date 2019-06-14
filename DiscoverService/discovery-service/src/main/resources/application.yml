@@ -7,5 +7,6 @@ eureka:
     
   datacenter: CMB-SL
   environment: production
+  name: oshan
       
 

@@ -10,4 +10,4 @@ eureka:
     instance-id: ${spring.application.name}-${random.int}
     hostname: localhost
 server:
-  port: 0
+  port: 8080

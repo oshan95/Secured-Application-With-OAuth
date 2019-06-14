@@ -20,7 +20,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler.Builder;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 
+import lk.oshan.sms.hystrix.AllocationCommand;
 import lk.oshan.sms.model.Allocation;
 import lk.oshan.sms.model.Employee;
 import lk.oshan.sms.model.Project;
@@ -50,33 +53,57 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return employeeRepository.findAll();
 	}
 	
-	public Employee fetchEmployee(Employee employee) {
-		Optional<Employee> optionalEmployee = employeeRepository.findById(employee.getId());
-		if (optionalEmployee.isPresent()) {
+	@Override
+	//@Hystrix
+	public Employee fetchEmployee(Employee employee, HttpHeaders headers) {
+		Optional<Employee> optional = employeeRepository.findById(employee.getId());
+				
+		if(optional.isPresent()) {
 			
-			//fetch project allocation
-			//RestTemplate restTemplate = new RestTemplate();
-			HttpHeaders httpHeaders = new HttpHeaders();
+			Employee employee2 = optional.get();
+			AllocationCommand allocationCommand = new AllocationCommand(employee, headers, restTemplate);
+			Allocation[] allocations = allocationCommand.execute();
 			
-			//extract token from context
-			OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) SecurityContextHolder.getContext().getAuthentication().getDetails();
-			httpHeaders.add("Authorization","bearer".concat(details.getTokenValue()));
+			employee2.setAllocations(allocations);
 			
-			//employee.getId().toString(), HttpMethod.GET, Entity, String.class
-			ResponseEntity<Allocation[]> responseEntity;
-			HttpEntity<String> entity = new HttpEntity<>("",httpHeaders);
+			return employee2;
 			
-//			remove localhost:9595/
-			responseEntity = restTemplate.exchange("http://Allocation-Service/allocation/employee/".concat(employee.getId().toString()), HttpMethod.GET, entity, Allocation[].class);
-			
-			Employee employee1 = optionalEmployee.get();
-			employee1.setAllocations(responseEntity.getBody());
-			
-			//return optionalEmployee.get();
-			return employee1;
 		}else {
 			return null;
 		}
 	}
+	
+	
+//	@HystrixCommand(fallbackMethod = "fetchEmployeeFallBack")
+	public Employee fetchEmployeeBack(Employee employee, HttpHeaders headers) {
+		
+		Employee employee2 = new Employee();
+		employee2.setName("Error");
+		return employee2;
+	}
+	
+	
+//	@HystrixCommand(fallbackMethod = "fetchEmployeeFallBack")
+//	public Allocation[] fetchEmployeeBack(Employee employee) {
+//		
+//		RestTemplate restTemplate = new RestTemplate();
+//		HttpHeaders httpHeaders = new HttpHeaders();
+//		
+//		OAuth2AuthenticationDetails details =(OAuth2AuthenticationDetails)
+//				SecurityContextHolder.getContext().getAuthentication().getDetails();
+//		httpHeaders.add("Authorization","bearer ".concat(details.getTokenValue()));
+//		System.out.println(details.getTokenValue());
+//		
+//		ResponseEntity<Allocation[]>responseEntity;
+//		HttpEntity<String>entity = new HttpEntity<>("",httpHeaders);
+//		responseEntity = restTemplate.exchange("http://Allocation-Service/allocation/employee/"
+//				.concat(String.valueOf(employee.getId())),HttpMethod.GET,entity,Allocation[].class);
+//		
+//		return responseEntity.getBody();
+//		
+//	}
+//	public Allocation[] fetchEmployeeFallBack(Employee employee, HttpHeaders httpHeaders) {
+//		return new Allocation[1]; 
+//	}
 
 }
